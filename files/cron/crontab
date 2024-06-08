@@ -12,12 +12,12 @@
   *  *  *  *  * /scripts/04_clean.sh > /dev/null
 
 # Создание резервной копии базы данных CMS каждый день в 1:00
-  0 1 * * * /scripts/03_mysqldump.sh > /dev/null
+  0  1  *  *  * /scripts/03_mysqldump.sh > /dev/null
 
 # Создание резервной копии директории CMS каждый понедельник в 1:00
-  0 1 * * 1 /scripts/02_backupsite.sh > /dev/null
+  0  1  *  *  1 /scripts/02_backupsite.sh > /dev/null
 
 # Удаление резервных копий, которые были созданы 30 дней назад, каждый день в 2:00
-  0 2 * * * /scripts/04_clean.sh > /dev/null
+  0  2  *  *  * /scripts/04_clean.sh > /dev/null
 
 # Don't remove the empty line at the end of this file. It is required to run the cron job
